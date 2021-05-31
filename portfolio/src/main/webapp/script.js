@@ -13,16 +13,29 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random language to the .
  */
-function addRandomGreeting() {
+function addRandomLanguage() {
     const greetings =
-        ['My favorite language is Java', 'My favorite videogame genre are JRPGS', 'If you dont succeed try, and try again ', 'While it is always best to believe in oneself, a little help from others can be a great blessing'];
+        ['c++', 'java', 'python', 'html'];
 
-    // Pick a random greeting.
-    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Pick a random Language.
+    const language = greetings[Math.floor(Math.random() * greetings.length)];
 
     // Add it to the page.
-    const greetingContainer = document.getElementById('greeting-container');
-    greetingContainer.innerText = greeting;
+    const languageContainer = document.getElementById('language-container');
+    languageContainer.innerText = language;
+
+
+    const imgElement = document.createElement('img');
+    imgElement.src = 'images/' + languageContainer.innerText + '.jpg';
+
+    const imageContainer = document.getElementById('random-image-container');
+
+    //Remove the previous image.
+    imageContainer.innerHTML = '';
+
+    imageContainer.appendChild(imgElement);
+
 }
+
