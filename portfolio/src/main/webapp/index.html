@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <header class="header">
+        <br />
+        <div class="Name">Steven's Portfolio</div>
+
+    </header>
+
+    <!--implement las navigation commands-->
+
+    <nav class="nav">
+        <span class="menu"><a href="index.html" class="menunav">Main Page</a></span>
+        <span class="menu"><a href="images.html" class="menunav">Gallery</a></span>
+        <span class="menu"><a href="SPS.html" class="menunav">SPS Experience</a></span>
+    </nav>
+
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <h1>Steven A. Nieves Ferrer</h1>
+        <h2>This is my portfolio.</h2>
+
+        <img src="/images/selfie.jpg" width="400" height="500" alt="Picture of me" />
+
+        <p>Hello, my name is Steven A. Nieves Ferrer. I'm a third-year Computer Engineering student at the Inter
+            American University
+            of Puerto Rico and I am very passionate about my career. Some of my freetime hobbies consist of playing
+            videogames, watching
+            movies or coding. I also like to study history and I'm interested in learing about Artificial Intelligence
+            in the near future. </p>
+
+        <p>I have always been interested in tech and it has influenced my decision to study my career. One of the first
+            steps I took was enrolling in a articulation program from the University of Puerto Rico to help get me
+            familiarized with my degree.
+            Overall, I find STEM related fields interesting and look foward to learn new skills.</p>
+
+        <div>
+            <h3>School projects</h3>
+            <p>These are the school projects I have worked on throughout my degree:</p>
+            <ul>
+                <li>
+                    <p>Core Data Analyzer Project</p>
+                </li>
+
+                <li>
+                    <p>Object Oriented Multi-Purpose Program</p>
+                </li>
+
+                <li>
+                    <p>InterCovid Algorithm</p>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Profiles</h3>
+            <ul>
+                <li>
+                    <p>Click here to view my LinkedIn Profile: <a
+                            href="https://www.linkedin.com/in/steven-nieves-ferrer-526117194/">LinkedIn Profile |</a>
+                    </p>
+                </li>
+
+                <li>
+                    <p>Click here to view my GitHub Profile: <a href="https://github.com/Stni18">GitHub Profile |</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <p>Let me share this wonderfull view with you all</p>
+
+        <p><span style="color:rgb(20, 230, 30); font-weight:bold">You can also click this image to go to the gallery
+            </span></p>
+        <a href="images.html" class="menunav"> <img src="/images/sunset_view.jpg" width="400" height="500"
+                alt="Sunset" /></a>
+
+
     </div>
-  </body>
+
+    <footer class="footer">
+        <span style="font-weight: bold;"> Google SPS Program</span>
+    </footer>
+</body>
+
 </html>

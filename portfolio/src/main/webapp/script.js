@@ -13,16 +13,29 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random language to the .
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomLanguage() {
+    const greetings =
+        ['c++', 'java', 'python', 'html'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Pick a random Language.
+    const language = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    // Add it to the page.
+    const languageContainer = document.getElementById('language-container');
+    languageContainer.innerText = language;
+
+
+    const imgElement = document.createElement('img');
+    imgElement.src = 'images/' + languageContainer.innerText + '.jpg';
+
+    const imageContainer = document.getElementById('random-image-container');
+
+    //Remove the previous image.
+    imageContainer.innerHTML = '';
+
+    imageContainer.appendChild(imgElement);
+
 }
+
