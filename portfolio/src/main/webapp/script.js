@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * Adds a random language to the .
+ * Adds a random programming language logo to the interactive page.
  */
 function addRandomLanguage() {
     const greetings =
@@ -38,4 +38,18 @@ function addRandomLanguage() {
     imageContainer.appendChild(imgElement);
 
 }
+
+ 
+/** Fetches the current date from the server and adds it to the page. */
+
+async function showServerMessage() {
+
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+
+  const greetingContainer = document.getElementById('greetings-container');
+  greetingContainer.innerText = textFromResponse;
+
+}
+
 
