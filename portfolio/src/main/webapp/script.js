@@ -52,10 +52,21 @@ async function showServerMessage() {
     // reference to create HTML.
     const myMessages = await responseFromServer.json();
 
-
-    greetingContainer.innerText = myMessages.randomMessage[0];
-
+    //greetingContainer.innerText = myMessages.messages;
+        
     //reference fields in myMessages 
     console.log("myMessages", myMessages);
 
+    //------------------------------------------------------------------
+    
+    const secondResponseFromServer = await fetch('/random');
+
+    const randomContainer = document.getElementById('random-container');
+
+    const randomChoice = await secondResponseFromServer.json();
+
+    randomContainer.innerText = randomChoice;
+
+    //reference fields in randomMessage 
+    console.log("randomMessage", randomChoice);
 }
