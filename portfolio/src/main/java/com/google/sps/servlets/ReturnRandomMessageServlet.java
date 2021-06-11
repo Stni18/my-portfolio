@@ -30,7 +30,7 @@ public class ReturnRandomMessageServlet extends HttpServlet {
         randomMessage.add("I am well versed in Java");
         randomMessage.add("If you do not succeed  try, and try again");
         
-        String crazyMessage = randomMessage.get(RandomNumb());
+        String crazyMessage = randomMessage.get(randomNumb());
 
         // should print the mesages in json format
         String jsonString = gson.toJson(crazyMessage);
@@ -38,7 +38,7 @@ public class ReturnRandomMessageServlet extends HttpServlet {
     }
 
 
-    public int RandomNumb() {
+    private static int randomNumb() {
 
         int random = 0;
         final int maxValue = 3;

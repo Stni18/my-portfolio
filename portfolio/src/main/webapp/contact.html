@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio - SPS experience</title>
+    <title>My Portfolio - Contact</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -27,21 +27,16 @@
     <div class="banner"><img src="images/Google_banner.jpg" id="pic" alt="Banner with Google Logo" /></div>
 
     <div id="content">
-        <h3>What I Learned So Far</h3>
 
-        <p>This is my first time participating in Google's Software Product Sprint program.</p>
-        <p>So far, I have learned about creating App Engines with the Google Cloud Platform</p>
-        <p>as well as some of the essetial commands used in GitHub and Google Cloud Editor.</p>
-        <p>Overall, this is going to be an amazing learning experience and I am looking </p>
-        <p>foward to what the future has to hold.</p>
+        <h1 class="title"> Contact Me: </h1>
+        <form name="form1" onclick="return validateform()" action="/form-handler" method="POST">
+            <p>Name: <input type="text" name="name"></p>
+            <p>Email: <input type="text" name="email"><span style="color:red;" id="error"></span></p>
+            <p>Subject: <input type="text" name="subject"></p>
+            <p>Comments: <br><textarea placeholder="Write here" name="text-input"></textarea></br></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
 
-        <div>
-
-            <h3>Interact</h3>
-
-            <p>Click this image to go to a page that will show a random programming language </p>
-            <a href="interactive.html"> <img src="/images/computer.jpg" width="400" height="500" /> </a>
-        </div>
     </div>
 
     <footer class="footer">
