@@ -39,17 +39,34 @@ function addRandomLanguage() {
 
 }
 
- 
+
 /** Fetches the current date from the server and adds it to the page. */
 
 async function showServerMessage() {
 
-  const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+    const responseFromServer = await fetch('/hello');
 
-  const greetingContainer = document.getElementById('greetings-container');
-  greetingContainer.innerText = textFromResponse;
+    const greetingContainer = document.getElementById('greetings-container');
 
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const myMessages = await responseFromServer.json();
+
+    //greetingContainer.innerText = myMessages.messages;
+        
+    //reference fields in myMessages 
+    console.log("myMessages", myMessages);
+
+    //------------------------------------------------------------------
+    
+    const secondResponseFromServer = await fetch('/random');
+
+    const randomContainer = document.getElementById('random-container');
+
+    const randomChoice = await secondResponseFromServer.json();
+
+    randomContainer.innerText = randomChoice;
+
+    //reference fields in randomMessage 
+    console.log("randomMessage", randomChoice);
 }
-
-
