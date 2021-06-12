@@ -18,10 +18,6 @@ public class ReturnRandomMessageServlet extends HttpServlet {
         // objects
         Gson gson = new Gson(); // used to convert string to Json
 
-        int random = 0;
-        final int maxValue = 3;
-        final int minValue = 0;
-
         // Create a string arraylist
         ArrayList<String> randomMessage = new ArrayList<String>();
         
