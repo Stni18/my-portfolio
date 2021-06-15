@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio - interact</title>
+    <title>My Portfolio - Contact</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -15,7 +15,7 @@
 
     </header>
 
-    <!--implement navigation commands-->
+    <!--implement las navigation commands-->
 
     <nav class="nav">
         <span class="menu"><a href="index.html" class="menunav">Main Page</a></span>
@@ -24,13 +24,19 @@
         <span class="menu"><a href="contact.html" class="menunav">Contact Me</a></span>
     </nav>
 
+    <div class="banner"><img src="images/Google_banner.jpg" id="pic" alt="Banner with Google Logo" /></div>
+
     <div id="content">
 
-        <p> Push this button to display the logo of C++, Java, Python or html</p>
-        <br />
-        <button onclick="addRandomLanguage()">Display Random Language</button>
-        <div id="language-container"></div>
-        <div id="random-image-container"></div>
+        <h1 class="title"> Contact Me: </h1>
+        <form name="form1" action="/form-handler" method="POST">
+            <p>Name: <input type="text" name="name"></p>
+            <p>Email: <input type="text" name="email"><span style="color:red;" id="error"></span></p>
+            <p>Subject: <input type="text" name="subject"></p>
+            <p>Comments: <br><textarea placeholder="Write here" name="text-input"></textarea></br></p>
+            <p><input type="submit" value="Submit" id="Form"></p>
+        </form>
+
     </div>
 
     <footer class="footer">

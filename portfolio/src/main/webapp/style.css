@@ -4,6 +4,11 @@
   width: 650px;
 }
 
+.title{
+	color: #dbad72;
+}
+
+
 #greeting-container {
   margin-top: 20px;
 }
@@ -85,4 +90,15 @@ a.menunav:hover  {
 iframe {
 	margin-top: 20px;
     margin-bottom: 20px;
+}
+
+form{
+    
+	border: 2px solid black;
+	width: 50%;
+	margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+	float: left;
+	font-size:20px;
 }

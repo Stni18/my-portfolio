@@ -52,13 +52,11 @@ async function showServerMessage() {
     // reference to create HTML.
     const myMessages = await responseFromServer.json();
 
-    //greetingContainer.innerText = myMessages.messages;
-        
     //reference fields in myMessages 
     console.log("myMessages", myMessages);
 
     //------------------------------------------------------------------
-    
+
     const secondResponseFromServer = await fetch('/random');
 
     const randomContainer = document.getElementById('random-container');
@@ -70,3 +68,18 @@ async function showServerMessage() {
     //reference fields in randomMessage 
     console.log("randomMessage", randomChoice);
 }
+
+
+//shows a error message if form has no email and prevents form from being sent
+
+ addEventListener("click", function(event) {
+    var email = document.forms["form1"]["email"].value;
+    if (email === null || email === "") {
+        document.getElementById('error').innerHTML = "*Mandatory";
+        event.preventDefault();
+    }
+});
+
+
+
+
