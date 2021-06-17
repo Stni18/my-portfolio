@@ -40,7 +40,7 @@ function addRandomLanguage() {
 }
 
 
-/** Fetches the current date from the server and adds it to the page. */
+/** Fetches the current message from the server and adds it to the page. */
 
 async function showServerMessage() {
 
@@ -67,19 +67,7 @@ async function showServerMessage() {
 
     //reference fields in randomMessage 
     console.log("randomMessage", randomChoice);
+
 }
-
-
-//shows a error message if form has no email and prevents form from being sent
-
- addEventListener("click", function(event) {
-    var email = document.forms["form1"]["email"].value;
-    if (email === null || email === "") {
-        document.getElementById('error').innerHTML = "*Mandatory";
-        event.preventDefault();
-    }
-});
-
-
 
 

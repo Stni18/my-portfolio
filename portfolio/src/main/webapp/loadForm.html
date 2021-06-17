@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio - Contact</title>
+    <title>My Portfolio - Load</title>
     <link rel="stylesheet" href="style.css">
-    <script src="formEmailNotice.js"></script>
+    <script src="loadFormData.js"></script>
 </head>
 
-<body>
+<body onload="loadForm()">
     <header class="header">
         <br />
         <div class="Name">Steven's Portfolio</div>
@@ -29,15 +29,20 @@
 
     <div id="content">
 
-        <h1 class="title"> Contact Me: </h1>
-        <form name="form1" action="/form-handler" method="POST">
-            <p>Name: <input type="text" name="name"></p>
-            <p>Email: <input type="text" name="email"><span style="color:red;" id="error"></span></p>
-            <p>Subject: <input type="text" name="subject"></p>
-            <p>Comments: <br><textarea placeholder="Write here" name="text-input"></textarea></br></p>
-            <p><input type="submit" value="Submit" id="Form"></p>
-        </form>
+        <h1 class="title"> Submissions: </h1>
+
+        <form action="/load-form" method="GET" >
+
+            <p><span style = "font-weight:bold"> [/Name, /Subject, /Comments] </span></p>
+            <p><span style="color:red; font-weight:bold"> *Emails are not displayed for the security of the clients*
+            </span></p>
+
+            <p id="form-container"></p>  <!--loads content from LoadFormServlet.html-->
+            <p><input type="submit" value="Submit"></p>
+         </form>
+
     </div>
+    
 
     <footer class="footer">
         <span style="font-weight: bold;"> Google SPS Program</span>
