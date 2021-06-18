@@ -1,5 +1,4 @@
 
-
 //shows a error message if form has no email and prevents form from being sent
 
  addEventListener("click", function(event) {
@@ -9,9 +8,3 @@
         event.preventDefault();
     }
 });
-
-
-
-
-
-

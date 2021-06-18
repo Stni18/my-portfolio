@@ -8,11 +8,10 @@
     <script src="loadFormData.js"></script>
 </head>
 
-<body onload="loadForm()">
+<body>
     <header class="header">
         <br />
         <div class="Name">Steven's Portfolio</div>
-
     </header>
 
     <!--implement las navigation commands-->
@@ -31,18 +30,13 @@
 
         <h1 class="title"> Submissions: </h1>
 
-        <form action="/load-form" method="GET" >
+        <p><span style="font-weight:bold"> [Name, Subject, Comments] </span></p>
+        <p><span style="font-weight:bold"> List of submissions </span></p>
 
-            <p><span style = "font-weight:bold"> [/Name, /Subject, /Comments] </span></p>
-            <p><span style="color:red; font-weight:bold"> *Emails are not displayed for the security of the clients*
-            </span></p>
+        <p><span style="color:red; font-weight:bold"> *Emails are not displayed for the security of the clients*</span></p>
 
-            <p id="form-container"></p>  <!--loads content from LoadFormServlet.html-->
-            <p><input type="submit" value="Submit"></p>
-         </form>
-
+        <p id="form-container"></p>
     </div>
-    
 
     <footer class="footer">
         <span style="font-weight: bold;"> Google SPS Program</span>

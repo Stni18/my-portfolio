@@ -67,7 +67,4 @@ async function showServerMessage() {
 
     //reference fields in randomMessage 
     console.log("randomMessage", randomChoice);
-
 }
-
-
