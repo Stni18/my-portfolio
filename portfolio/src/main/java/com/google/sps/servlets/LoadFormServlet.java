@@ -41,7 +41,7 @@ public final class LoadFormServlet extends HttpServlet {
             String subject = entity.getString("subject");
             String comment = entity.getString("text-input");
 
-            String[] content = { "Name: " + name, " Subject: " + subject, " Comments: " + comment };
+            String[] content = {name, subject, comment };
 
             forms.add(content);
         }

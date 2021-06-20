@@ -4,7 +4,7 @@
  addEventListener("click", function(event) {
     var email = document.forms["form1"]["email"].value;
     if (email === null || email === "") {
-        document.getElementById('error').innerHTML = "*Mandatory";
+        document.getElementById('error').innerHTML = "*Mandatory*";
         event.preventDefault();
     }
 });

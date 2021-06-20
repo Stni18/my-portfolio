@@ -1,9 +1,9 @@
 
 // Load the function that loads the form entities on page when readystate is complete
 document.onreadystatechange = function () {
-  if (document.readyState === 'complete') {
-    loadForm();
-  }
+    if (document.readyState === 'complete') {
+        loadForm();
+    }
 }
 
 //Fetches data from form and parses it to HTML as a list that loads all of the messages
@@ -25,12 +25,43 @@ async function loadForm() {
 
     //Displays list of form submissions in loadForm.html
     let docContainer = document.getElementById('form-container');
-    let listContainer = document.createElement('ul');
+
+    //------------------------------------
+
+    // creates a <table> element and a <tbody> element
+    var tbl = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+    // creating all cells
     for (var i = 0; i < list.length; i++) {
-        let submission = list[i];
-        let elem = document.createElement('li');
-        elem.appendChild(document.createTextNode(`${submission}`));
-        listContainer.appendChild(elem);
+
+        // creates a table row
+        var row = document.createElement("tr");
+
+        for (var j = 0; j < 3; j++) {
+            // Create a <td> element and a text node, make the text
+            // node the contents of the <td>, and put the <td> at
+            // the end of the table row
+
+            var cell = document.createElement("td");
+
+            var cellText = document.createTextNode(list[i][j]);
+
+            cell.appendChild(cellText);
+
+            row.appendChild(cell);
+        }
+
+        // add the row to the end of the table body
+        tblBody.appendChild(row);
     }
-    docContainer.appendChild(listContainer);
- }
+
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+
+    // appends <table> into docContainer
+    docContainer.appendChild(tbl)
+
+    // sets the border attribute of tbl to 2;
+    tbl.setAttribute("border", "3");
+}

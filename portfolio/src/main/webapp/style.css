@@ -101,3 +101,10 @@ form{
 	float: left;
 	font-size:20px;
 }
+
+
+
+table, td {
+	text-align:center;
+	border: 1px solid gray;
+}
