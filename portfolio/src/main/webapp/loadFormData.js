@@ -56,7 +56,7 @@ async function loadForm() {
         tblBody.appendChild(row);
     }
 
-    // appends <table> into docContainer
-    docContainer.appendChild(tblBody)
+    //adds the content to the table
+    tbl.appendChild(tblBody);
 
 }
