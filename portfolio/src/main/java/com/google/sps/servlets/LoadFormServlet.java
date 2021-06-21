@@ -32,7 +32,7 @@ public final class LoadFormServlet extends HttpServlet {
                 .build();
         QueryResults<Entity> results = datastore.run(query);
 
-        ArrayList<Object> forms = new ArrayList<>();
+        ArrayList<ArrayList<String>> forms = new ArrayList<>();
 
         while (results.hasNext()) {
             Entity entity = results.next();
@@ -41,7 +41,10 @@ public final class LoadFormServlet extends HttpServlet {
             String subject = entity.getString("subject");
             String comment = entity.getString("text-input");
 
-            String[] content = {name, subject, comment };
+            ArrayList<String> content = new ArrayList<>();
+            content.add(name);
+            content.add(subject);
+            content.add(comment);
 
             forms.add(content);
         }

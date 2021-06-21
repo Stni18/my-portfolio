@@ -11,8 +11,6 @@ async function loadForm() {
 
     const responseFromServer = await fetch('/load-form');
 
-    const formContainer = document.getElementById('form-container');
-
     // The json() function returns an object that contains fields that we can
     // reference to create HTML.
     const myForm = await responseFromServer.json();
@@ -23,8 +21,6 @@ async function loadForm() {
 
     const list = myForm; //const variable that stores the submissions as list
 
-    //Displays list of form submissions in loadForm.html
-    let docContainer = document.getElementById('form-container');
 
     //------------------------------------
 
