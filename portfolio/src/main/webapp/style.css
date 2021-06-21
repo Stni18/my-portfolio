@@ -103,8 +103,8 @@ form{
 }
 
 
-
 table, td {
 	text-align:center;
-	border: 1px solid gray;
+    border: 1px solid gray;
+    tab-size: 8;
 }

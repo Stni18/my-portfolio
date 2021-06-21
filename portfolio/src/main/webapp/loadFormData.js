@@ -29,7 +29,7 @@ async function loadForm() {
     //------------------------------------
 
     // creates a <table> element and a <tbody> element
-    var tbl = document.createElement("table");
+    var tbl = document.getElementById("table");
     var tblBody = document.createElement("tbody");
 
     // creating all cells
@@ -56,12 +56,7 @@ async function loadForm() {
         tblBody.appendChild(row);
     }
 
-    // put the <tbody> in the <table>
-    tbl.appendChild(tblBody);
-
     // appends <table> into docContainer
-    docContainer.appendChild(tbl)
+    docContainer.appendChild(tblBody)
 
-    // sets the border attribute of tbl to 2;
-    tbl.setAttribute("border", "3");
 }
