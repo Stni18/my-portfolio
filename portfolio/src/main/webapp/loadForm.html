@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio - Contact</title>
+    <title>My Portfolio - Load</title>
     <link rel="stylesheet" href="style.css">
-    <script src="formEmailNotice.js"></script>
+    <script src="loadFormData.js"></script>
 </head>
 
 <body>
     <header class="header">
         <br />
         <div class="Name">Steven's Portfolio</div>
-
     </header>
 
     <!--implement las navigation commands-->
@@ -29,14 +28,26 @@
 
     <div id="content">
 
-        <h1 class="title"> Contact Me: </h1>
-        <form name="form1" action="/form-handler" method="POST">
-            <p>Name: <input type="text" name="name"></p>
-            <p>Email: <input type="text" name="email"><span style="color:red;" id="error"></span></p>
-            <p>Subject: <input type="text" name="subject"></p>
-            <p>Comments: <br><textarea placeholder="Write here" name="text-input"></textarea></br></p>
-            <p><input type="submit" value="Submit" id="Form"></p>
-        </form>
+        <h1 class="title"> Submissions: </h1>
+
+        <p><span style="color:red; font-weight:bold"> *Emails are not displayed for the security of the clients*</span>
+        </p>
+
+
+        <table id="table">
+            <tr>
+                <td>
+                    <h3>Name</h3>
+                </td>
+                <td>
+                    <h3>Subject</h3>
+                </td>
+                <td>
+                    <h3>Comments</h3>
+                </td>
+            </tr>
+        </table>
+
     </div>
 
     <footer class="footer">
