@@ -19,9 +19,6 @@ async function loadForm() {
     console.log("Submissions:", myForm);   //This works
 
 
-    const list = myForm; //const variable that stores the submissions as list
-
-
     //------------------------------------
 
     // creates a <table> element and a <tbody> element
@@ -29,7 +26,7 @@ async function loadForm() {
     var tblBody = document.createElement("tbody");
 
     // creating all cells
-    for (var i = 0; i < list.length; i++) {
+    for (var i = 0; i < myForm.length; i++) {
 
         // creates a table row
         var row = document.createElement("tr");
@@ -41,7 +38,7 @@ async function loadForm() {
 
             var cell = document.createElement("td");
 
-            var cellText = document.createTextNode(list[i][j]);
+            var cellText = document.createTextNode(myForm[i][j]);
 
             cell.appendChild(cellText);
 
