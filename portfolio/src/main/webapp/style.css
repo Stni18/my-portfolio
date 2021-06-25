@@ -4,6 +4,12 @@
   width: 650px;
 }
 
+#chart::before{
+    content: ' ';
+    content: "\a\a\a";
+    white-space: pre;
+}
+
 .title{
 	color: #dbad72;
 }
