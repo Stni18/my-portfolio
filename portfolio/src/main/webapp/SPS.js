@@ -1,27 +1,37 @@
 
 //Testing out a chart
 
-google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.load('current', { 'packages': ['bar'] });
 google.charts.setOnLoadCallback(drawChart);
 
-/** Creates a chart and adds it to the page. */
 function drawChart() {
-    const data = new google.visualization.DataTable();
-    data.addColumn('string', 'Language');
-    data.addColumn('number', 'Count');
-    data.addRows([
-        ['C++', 20],
-        ['Python', 10],
-        ['Java', 30]
+    var data = new google.visualization.arrayToDataTable([
+        ['Languages', 'Percentage'],
+        ["Java", 73],
+        ["C++", 60],
+        ["Python", 42],
+        ['Other', 10]
     ]);
 
-    const options = {
-        'title': 'Programming languages used',
-        'width': 500,
-        'height': 400
+    var options = {
+        title: 'Programming skills',
+        width: 900,
+        height:500,
+        legend: { position: 'none' },
+        chart: {
+            title: 'Programming Language Skills',
+            subtitle: 'Percentage of skill'
+        },
+        bars: 'horizontal', // Required for Material Bar Charts.
+        axes: {
+            x: {
+                0: { side: 'top', label: 'Percentage' } // Top x-axis.
+            }
+        },
+        bar: { groupWidth: "90%" }
+
     };
 
-    const chart = new google.visualization.PieChart(
-        document.getElementById('chart-container'));
+    var chart = new google.charts.Bar(document.getElementById('chart-container'));
     chart.draw(data, options);
-}
+};
